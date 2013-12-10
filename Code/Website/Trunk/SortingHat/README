@@ -1,0 +1,57 @@
+Scheduling System
+HOW-TO VIEW
+===============================================
+Debug as web application
+In browser go to 127.0.0.1:8888
+
+Register classes with datastore:
+	in SchedulingSystemServlet.java doPost():
+		ObjectifyService.register...
+
+=================================================
+Plan in outline
+
+Flow of webpages:
+1. index.html
+A2. lecturerLogin.jsp
+A3. LecturerLoginServlet.java
+A4. lecturerBackend.jsp
+AA5. createLecturerPage.jsp
+AA6. LecturerTimesServlet.java
+AB5. classManagementPage.jsp
+B2. SchedulingSystemServlet.java
+B3. createStudentPage.jsp
+B4. SchedulingSystemServlet.java
+B5. thankYou.jsp 
+
+=================================================
+TODO
+add button to return to class list (lecturerBackend) from classManagementPage.jsp
+
+consider Individual crossover parameter - currently line number, could use percentage
+
+ and list sorter - write the entire program to run as a servlet
+print class list for lecturer backend
+add lecturer field to classTimes.java DONE
+
+fix for incorrect input or unmatched input of "className" in schedulingsystem
+sanitise input
+prevent duplicate student entry, check for legitimate student number and name
+fix load student page, currently throws exception on including /schedulingsystem
+change createStudentPage to not show checkboxes instead of disabling them
+===============================================================================
+COMPLETED TASKS
+
+20131113
+look at creating a session for the lecturer login to keep details such as id, class and so on PARTDONE
+work on list generator (create list of size n and store to datastore, replacing old list) DONE
+
+Porting it across to google app engine DONE
+How to use post info DONE
+Figure out how to use datastore DONE
+
+add page to select course for students DONE
+craft servlet to add student times to student string in datastore DONE
+add extra pages to streamline experience DONE
+
+

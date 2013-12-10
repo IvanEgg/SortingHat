@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+	    <servlet-name>InitialStudent</servlet-name>
+	    <servlet-class>com.wagnerandpei.incubate.InitialStudentServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>InitialStudent</servlet-name>
+	    <url-pattern>/initialstudent</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SchedulingSystem</servlet-name>
+		<servlet-class>com.wagnerandpei.incubate.SchedulingSystemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SchedulingSystem</servlet-name>
+		<url-pattern>/schedulingsystem</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	    <servlet-name>ListGenerator</servlet-name>
+	    <servlet-class>com.wagnerandpei.incubate.ListGeneratorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>ListGenerator</servlet-name>
+	    <url-pattern>/listgenerator</url-pattern>
+	</servlet-mapping>
+	<!--  <servlet>
+	    <servlet-name>ListSorter</servlet-name>
+	    <servlet-class>com.wagnerandpei.incubate.ListSorterServlet</servlet-class>
+	</servlet> 
+	<servlet-mapping>
+	    <servlet-name>ListSorter</servlet-name>
+	    <url-pattern>/listsort</url-pattern>
+	</servlet-mapping> -->
+	<servlet>
+	    <servlet-name>LecturerTimes</servlet-name>
+	    <servlet-class>com.wagnerandpei.incubate.LecturerTimesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>LecturerTimes</servlet-name>
+	    <url-pattern>/lecturertimes</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	    <servlet-name>LecturerLogin</servlet-name>
+	    <servlet-class>com.wagnerandpei.incubate.LecturerLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>LecturerLogin</servlet-name>
+	    <url-pattern>/lecturerlogin</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ObjectifyFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>
+
